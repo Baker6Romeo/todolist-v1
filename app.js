@@ -6,9 +6,13 @@ const app = express();
 app.set('view engine', 'ejs');
 app.get("/", (req, res) => {
 
-  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  let dayOfTheWeek = new Date().getDay();
-  let today = weekdays[dayOfTheWeek];
+  let dayOfTheWeek = new Date();
+  let options = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long'
+  };
+  let today = dayOfTheWeek.toLocaleDateString("en-US", options);
 
   res.render('list', {today: today});
 });
