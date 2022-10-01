@@ -3,6 +3,9 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.set('view engine', 'ejs');
 app.get("/", (req, res) => {
 
@@ -15,6 +18,10 @@ app.get("/", (req, res) => {
   let today = dayOfTheWeek.toLocaleDateString("en-US", options);
 
   res.render('list', {today: today});
+});
+
+app.post("/", (req, res) => {
+  console.log(req.body.newItem);
 });
 
 // Depending on whether you're running local or hosted the port may be different
