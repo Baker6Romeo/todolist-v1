@@ -9,9 +9,9 @@
     <h1><%= today %></h1>
 
     <ul>
-      <li>Buy Food</li>
-      <li>Cook Food</li>
-      <li>Eat Food</li>
+      <% list.forEach(item => { %>
+        <li><%= item %></li>
+      <% }); %>
     </ul>
 
     <form action="/" method="post">
