@@ -5,6 +5,11 @@
     <title>To Do List</title>
   </head>
   <body>
-    <h1>It's <%= today %>!</h1>
+
+    <% if (today === 'Saturday' || today === 'Sunday'){ %>
+    <h1 style="color: purple">It's <%= today %>!</h1>
+  <% } else { %>
+    <h1 style="color: blue">It's <%= today %>!</h1>
+  <% } %>
   </body>
 </html>
