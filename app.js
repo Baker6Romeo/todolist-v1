@@ -6,7 +6,11 @@ const app = express();
 app.set('view engine', 'ejs');
 app.get("/", (req, res) => {
 
-  res.render('list', {foo: 'FOO'});
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let dayOfTheWeek = new Date().getDay();
+  let today = weekdays[dayOfTheWeek];
+
+  res.render('list', {today: today});
 });
 
 // Depending on whether you're running local or hosted the port may be different
