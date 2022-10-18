@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   res.render('list', {list: items, listTitle: today});
 });
 
+app.get("/about", (req, res) => {
+  res.render('about')
+});
+
 app.get("/work", (req, res) => {
   res.render('list', {list: workItems, listTitle: "Work List"})
 });
