@@ -16,11 +16,11 @@
       <% list.forEach(item => { %>
         <div class="item">
           <input type="checkbox">
-          <p></p><%= item %></p>
+          <p><%= item %></p>
         </div>
       <% }); %>
       <form action="/" method="post">
-        <input type="text" name="newItem"placeholder="New Item">
+        <input type="text" name="newItem"placeholder="New Item" autocomplete="off">
         <button type="submit" name="Button">+</button>
       </form>
     <div>
