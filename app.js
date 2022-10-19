@@ -36,7 +36,7 @@ app.post("/", (req, res) => {
 });
 
 // Depending on whether you're running local or hosted the port may be different
-const port = process.env.PORT;
+let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }

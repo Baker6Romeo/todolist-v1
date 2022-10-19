@@ -13,6 +13,6 @@ exports.getDay = function() {
   const options = {
     weekday: 'long'
   };
-  return = dayOfTheWeek.toLocaleDateString("en-US", options);
+  return dayOfTheWeek.toLocaleDateString("en-US", options);
 
 }
